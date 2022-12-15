@@ -1,13 +1,26 @@
 <mat-toolbar class="max-w-7x1 mx-auto border-x justify-between">
     <a routerLink="home">Video Games</a>
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon
-         [matBadge]="itemsQuantity" 
-         [matBadgeHidden]="!itemsQuantity"
-         matBadgeColor="warn">
-         shopping_cart
-        </mat-icon>
-    </button>
+    <div class="flex space-around">
+        <div class="flex justify-between">
+            <div class="flex space-around">
+                <a routerLink="login" class="p-3 button">Login</a>
+                <a routerLink="register" class="p-3 button">Register</a>
+            </div>
+            
+        </div>
+        <button mat-icon-button [matMenuTriggerFor]="menu"
+        >
+        
+            <mat-icon class="p-2"
+             [matBadge]="itemsQuantity" 
+             [matBadgeHidden]="!itemsQuantity"
+             matBadgeColor="warn">
+             shopping_cart
+            </mat-icon>
+        </button>
+    </div>
+    
+    
     <mat-menu #menu="matMenu">
         <div class="p-3 divide-y divide-solid">
             <div class="pb-3 flex justify-between">
@@ -27,7 +40,7 @@
                 Total:
                 <span class="font-bold">{{ getTotal(cart.items) | currency}}</span>
             </div>
-            <div class="pt-3 flex justify-between">
+            <div class="pt-2 flex justify-between">
                 <button (click)="onClearCart()"
                 class="bg-orange-600 text-white rounded-full w-9 h-9">
                     <mat-icon>remove_shopping_cart</mat-icon>
