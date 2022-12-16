@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Cart, CartItem } from 'src/app/models/cart.module';
+import { AuthService } from 'src/app/pages/auth/auth.service';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -23,7 +24,7 @@ export class HeaderComponent implements OnInit {
       .reduce((prev, current) => prev + current, 0)
   }
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private authService: AuthService) { }
 
   ngOnInit(): void {
   }
@@ -34,6 +35,10 @@ export class HeaderComponent implements OnInit {
 
   onClearCart(){
     this.cartService.clearCart()
+  }
+
+  btnLogOut() {
+    this.authService.logout()
   }
 
 }

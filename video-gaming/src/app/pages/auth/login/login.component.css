@@ -1,0 +1,87 @@
+/* .example-card {
+    max-width: 400px;
+}
+
+.center-content {
+    margin-top: 100px;
+    text-align: -webkit-center;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.mat-button {
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    height: 40px;
+    background-color: #3F51B5;
+} */
+
+*{
+  font-family: var(--font);
+  box-sizing:  border-box;
+  margin: 0;
+  padding: 0;
+}
+#formContent {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.photo-login{
+  width: 50%;
+  padding: 20px 0;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 50%;
+}
+
+input{
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  border-radius: 30px;
+  background-color: #dddcdc;
+}
+
+.button{
+  background-color: rgb(110, 110, 238);
+  border-style: none;
+  border-radius: 30px;
+  padding: 15px 32px;
+  font-size: 16px;
+  text-align: center;
+  color: var(--background-color);
+}
+
+@media only screen and ( min-width: 960px){
+.photo-login {
+  width: 20%;
+}
+}

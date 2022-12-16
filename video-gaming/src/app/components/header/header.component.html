@@ -1,10 +1,12 @@
 <mat-toolbar class="max-w-7x1 mx-auto border-x justify-between">
-    <a routerLink="home">Video Games</a>
+    <a routerLink="home">Nikoleta's store!</a>
     <div class="flex space-around">
         <div class="flex justify-between">
             <div class="flex space-around">
                 <a routerLink="login" class="p-3 button">Login</a>
-                <a routerLink="register" class="p-3 button">Register</a>
+                <button (click)="btnLogOut()">
+                    Logout
+                    </button>
             </div>
             
         </div>

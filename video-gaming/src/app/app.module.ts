@@ -13,6 +13,8 @@ import {MatTableModule} from '@angular/material/table'
 import {MatBadgeModule} from '@angular/material/badge'
 import {MatSnackBarModule} from '@angular/material/snack-bar'
 import {MatListModule} from '@angular/material/list'
+import {MatTabsModule} from '@angular/material/tabs'
+import {MatInputModule} from '@angular/material/input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +30,10 @@ import { StoreService } from './services/store.service';
 import {  HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+import { AuthService } from './pages/auth/auth.service';
+
+
 
 @NgModule({
   declarations: [
@@ -58,10 +64,17 @@ import { RegisterComponent } from './pages/auth/register/register.component';
     MatTableModule,
     MatBadgeModule,
     MatSnackBarModule,
-    HttpClientModule
-
+    HttpClientModule,
+    MatTabsModule,
+    MatInputModule,
+    FormsModule,
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+   
   ],
-  providers: [CartService, StoreService],
+  providers: [CartService, StoreService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,68 @@
-<form (submit)="loginUser($event)">
+<!-- <form (submit)="loginUser($event)">
     <input type="text" placeholder="Username" id="username">
     <input type="password" placeholder="Password" id="password">
     <input type="submit" value="submit">
-</form>
+</form> -->
+<!-- <div class="center-content">
+    <mat-card class="example-card">
+      
+      <mat-card-content>
+        <mat-tab-group>
+          <mat-tab label="Login">
+            <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput placeholder="Email" value="" [(ngModel)]="loginObj.email">
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+  
+            <mat-form-field class="example-full-width">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput placeholder="Password" [(ngModel)]="loginObj.password">
+              <mat-icon matSuffix>vpn_key</mat-icon>
+            </mat-form-field>
+            <button mat-button color="primary" (click)="login()">Login</button>
+          </mat-tab>
+
+          <mat-tab label="Register">
+            <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput placeholder="Email" value="" [(ngModel)]="signupObj.remail" >
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+  
+            <mat-form-field class="example-full-width">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput placeholder="Password"[(ngModel)]="signupObj.rpassword" >
+              <mat-icon matSuffix>vpn_key</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput placeholder="Password" [(ngModel)]="signupObj.repassword">
+              <mat-icon matSuffix>vpn_key</mat-icon>
+            </mat-form-field>
+            <button mat-button color="primary" (click)="register()" >Register</button>
+          </mat-tab>
+        </mat-tab-group>
+  
+      </mat-card-content>
+  
+    </mat-card>
+  </div> -->
+
+  <div id="formContent">
+    <h1>Welcome to my Store!</h1>
+    <img class="photo-login" src="../../../../assets/img/photo.png" alt="">
+    <form [formGroup]="form">
+      <div>
+        <input id="username" type="text" name="username" formControlName="username" autocomplete="off" class="fadeIn second"
+          placeholder="username">
+      </div>
+      <div class="passwordGroup">
+        <input id="password" type="text" name="password" formControlName="password" class="fadeIn third" placeholder="password">
+      </div>
+      <div>
+        <p *ngIf="error" class="error">{{errorMessage}}</p>
+        <button type="submit" class="button" value="Login" (click)="onLogin()">Login</button>
+      </div>
+    </form>
+  </div>

@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { Product } from 'src/app/models/product.model';
 import { CartService } from 'src/app/services/cart.service';
 import { StoreService } from 'src/app/services/store.service';
+import { AuthService } from '../auth/auth.service';
 
 const ROWS_HEIGHT: {[id: number]: number} = {1: 400, 3: 335, 4: 350}
 @Component({
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   count = '12'
   productsSubscription: Subscription | undefined
 
-  constructor(private cartService: CartService, private storeService: StoreService) { }
+  constructor(private cartService: CartService, private storeService: StoreService, private authService: AuthService) { }
   ngOnDestroy(): void {
     if(this.productsSubscription) {
       this.productsSubscription.unsubscribe()
@@ -66,4 +67,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.sort = newSort
     this.getProducts()
   }
+
+  
 }
