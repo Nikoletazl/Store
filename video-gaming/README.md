@@ -9,7 +9,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Application
 
-This is an e-commerce website where users can make orders. Im am using fakestore api to make request.
+This is an e-commerce website where users can make orders. I am using fakestore api to make request.
 
 ## Login
 
