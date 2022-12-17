@@ -13,6 +13,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+   
 
   public form: FormGroup;
   error: boolean;
@@ -29,6 +30,7 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
+    
     this.error = false;
     this.errorMessage = '';
     const body = this.form.value;

@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
   constructor(private cartService: CartService, private authService: AuthService) { }
 
   ngOnInit(): void {
-  }
+   }
 
   getTotal(items: Array<CartItem>): number {
     return this.cartService.getTotal(items)
@@ -42,3 +42,4 @@ export class HeaderComponent implements OnInit {
   }
 
 }
+

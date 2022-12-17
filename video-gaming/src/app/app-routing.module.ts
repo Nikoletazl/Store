@@ -6,6 +6,8 @@ import { CartComponent } from './pages/cart/cart.component';
 import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
+
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {
     path: 'home',
     component: HomeComponent
@@ -22,11 +24,11 @@ const routes: Routes = [
     path: 'register',
     component: RegisterComponent
   },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
+  // {
+  //   path: '',
+  //   redirectTo: 'home',
+  //   pathMatch: 'full'
+  // },
   
 ];
 

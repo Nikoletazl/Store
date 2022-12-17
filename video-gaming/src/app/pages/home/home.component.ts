@@ -1,5 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Cart, CartItem } from 'src/app/models/cart.module';
 import { Product } from 'src/app/models/product.model';
 import { CartService } from 'src/app/services/cart.service';
 import { StoreService } from 'src/app/services/store.service';
@@ -12,6 +13,7 @@ const ROWS_HEIGHT: {[id: number]: number} = {1: 400, 3: 335, 4: 350}
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  
   cols = 3
   rowHeight = ROWS_HEIGHT[this.cols]
   category: string | undefined
@@ -67,6 +69,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.sort = newSort
     this.getProducts()
   }
+
+
 
   
 }
